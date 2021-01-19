@@ -75,4 +75,8 @@ def to_camel_case(underscore_str):
     if len(a) == 1:
         return ''.join(a)
     camelcase_str = ''.join([x.lower().title() for x in a])
+    if len(camelcase_str) == 0:
+        return camelcase_str
+    elif len(camelcase_str) == 1:
+        return camelcase_str.lower()
     return camelcase_str[0].lower() + camelcase_str[1:]
